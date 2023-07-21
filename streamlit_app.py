@@ -56,4 +56,8 @@ streamlit.dataframe(my_data_rows)
 
 # ask to choose another fruit
 add_my_fruit = streamlit.text_input('What fruit do you want to add?', 'Apple')
-streamlit.write('Thanks for adding', add_my_fruit)                                     
+streamlit.write('Thanks for adding', add_my_fruit) 
+
+# adding the next line to demostrate control flow. It gets fired each time a text box changes
+my_cur.execute("INSERT INTO PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST VALUES ('from streamlit')")
+
